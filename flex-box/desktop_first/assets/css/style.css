@@ -1,0 +1,79 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+   
+    font-size: 3rem;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    text-align: center;
+}
+
+header{
+    background-color: blue;
+}
+
+.main{
+    display: flex;
+    padding: 0.25rem;
+    gap: 0.25rem;
+}
+nav{
+    background-color: yellow;
+    flex: 1;
+}
+
+section{
+    background-color: #ccc;
+    height: 70vh;
+    flex: 3;
+    display: flex;
+    padding: 0.5rem;
+    gap: 10px;
+
+}
+
+article{
+    background-color: blueviolet;
+    flex: 2;
+}
+
+.aside{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+aside{
+    background-color: green;
+    flex: 1;
+}
+
+footer{
+    background-color: brown;
+}
+
+/* Tablette Verison */
+@media screen and (min-width:600px) and (max-width:900px) {
+    section{
+        flex-direction: column;
+    }
+
+}
+
+/* Mobile Verison */
+@media screen and (max-width:600px) {
+    .main{
+        flex-direction: column;
+    }
+
+    section{
+        flex-direction: column;
+    }
+
+}

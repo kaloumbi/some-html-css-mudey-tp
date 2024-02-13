@@ -1,0 +1,153 @@
+nav#menu{
+    top: 0;
+}
+
+nav#menu ul{
+    background-color: brown;
+    color: white;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+nav#menu ul li a:hover{
+    background-color: white;
+    color: black;
+}
+
+nav#menu ul li a{
+    white-space: nowrap;
+    height: 50px;
+    line-height: 50px;
+    color: inherit;
+    text-decoration: inherit;
+}
+
+/* MISE EN FORM DES SOUS MENUS */
+#menu ul ul{
+    display: none;
+}
+
+#menu ul li:hover ul{
+    display: block;
+}
+
+#menu ul ul a{
+    width: 250px;
+}
+
+
+
+/* MISE EN FORM DES SOUS MENUS DES SOUS MENU */
+
+#menu ul ul ul{
+    top: 0;
+    left: 250px;
+}
+
+#menu ul li:hover ul ul{
+    display: none;
+}
+
+#menu ul ul li:hover ul{
+    display: block;
+}
+
+.burger-icon{
+    display: none;
+}
+
+/* ************ Mega Menu ************* */
+.mega:hover .mega-menu{
+    display: flex;
+}
+.mega-menu{
+    background-color: #efefef;
+    color: black;
+    left: 0;
+    margin-top: 1.3rem;
+    width: 100%;
+    height: calc(100vh - 14vh) ;
+    display: none; /*empecher l'affichage par defaut du menu*/
+    overflow: auto; /*pour le scrol*/
+}
+
+.mega-menu-item{
+    display: block;
+}
+
+#menu .mega-menu ul li a{
+    color: black;
+    line-height: 0;
+}
+#menu .mega-menu ul, .mega-menu{
+    background-color: #efefef;
+    opacity: 0.8;
+ }
+
+#menu .mega-menu ul li{
+   font-weight: normal;
+   text-transform: capitalize;
+   padding: 5px;
+}
+
+
+#menu .mega-menu ul li:hover, #menu .mega-menu ul li:hover a:hover{
+    background-color: black;
+    border: 1px solid black;
+}
+
+#menu .mega-menu ul li:hover a, #menu .mega-menu ul li:hover a:hover{
+    color: white;
+    border: 1px solid black;
+}
+
+
+@media screen and (max-width:944px) {
+    /* Sous Menu Des Sous Menus */
+    #menu ul li:nth-child(4) ul ul{
+        left: -250px;
+    }
+
+}
+
+/* RESPONSIVE MOBILE */
+@media screen and (max-width:700px) {
+    nav#menu> ul{
+        flex-direction: column;
+        gap: 0;
+    }
+    
+    nav#menu ul>li{
+        text-align: center;
+        border-bottom: 0.1px solid #ccc;
+    }
+
+    nav#menu ul>li:last-child{
+        text-align: center;
+        border-bottom: none;
+    }
+    /* cacher les sous menus et sous menus des sous menu coté mobile */
+    #menu >ul >li:hover ul{
+        display: none;
+    }
+
+    .dropdown::after{
+        content: "";
+    }
+
+    /* Afficher le burger-icon et cacher les menu */
+    .burger-icon{
+        display: block;
+        float: right;
+    }
+    
+    #menu > ul > li{
+        display: none;
+    }
+
+    #menu > ul> li:first-child{
+        display: block;
+    }
+
+}
+

@@ -1,0 +1,103 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    gap: 0.25rem;
+    font-size: 3rem;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+
+header{
+    background-color: blue;
+    padding: 10PX;
+}
+
+nav{
+    background-color: yellow;
+}
+
+section{
+    background-color: #ccc;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    padding: 0.5rem;
+}
+
+section .aside{
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+
+
+}
+
+aside{
+    background-color: green;
+}
+
+article{
+    background-color: blueviolet;
+    height: 30vh;
+}
+
+
+
+
+footer{
+    background-color: brown;
+    padding: 10PX;
+}
+
+/* Tablette Version */
+@media screen and (min-width:600px) and (max-width:900px) {
+    .main{
+        display: flex; 
+    }
+
+    nav{
+        flex: 1;
+    }
+
+    section{
+        flex: 3;
+    }
+    
+}
+
+/* Desktop Version */
+@media screen and (min-width:901px) {
+    .main{
+        display: flex; 
+    }
+
+    nav{
+        flex: 1;
+    }
+
+    section{
+        display: flex;
+        flex-direction: row;
+        flex: 3;
+    }
+
+    article{
+        flex: 2;
+        height: auto;
+    }
+
+    .aside{
+        flex: 1;
+    }
+
+
+}
